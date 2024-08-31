@@ -347,3 +347,5 @@ git rebase --interactive HEAD~5
 git stash
 git rebase --interactive HEAD~5
 git log --oneline
+git log --1
+git log -1
