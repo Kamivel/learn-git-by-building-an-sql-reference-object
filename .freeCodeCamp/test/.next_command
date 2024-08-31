@@ -337,3 +337,4 @@ git reset HEAD~1
 git log --oneline
 git rebase main
 git log --oneline
+git rebase --interactive HEAD~5
