@@ -338,3 +338,11 @@ git log --oneline
 git rebase main
 git log --oneline
 git rebase --interactive HEAD~5
+git add README.md sql_reference.json
+git commit -m "a"
+git rebase --interactive HEAD~5
+__vsc_prompt_cmd_original
+git log --oneline
+git rebase --interactive HEAD~5
+git stash
+git rebase --interactive HEAD~5
