@@ -375,3 +375,5 @@ git checkout -b feat/add-gitignore
 touch .env
 git status
 touch .gitignore
+git sta
+git status
