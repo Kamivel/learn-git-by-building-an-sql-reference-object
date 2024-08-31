@@ -378,3 +378,4 @@ touch .gitignore
 git sta
 git status
 git status
+git add .
