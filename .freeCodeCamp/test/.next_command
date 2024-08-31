@@ -356,3 +356,4 @@ git -d branch feat/add-column-references
 git branch -d feat/add-column-references
 git checkout fix/add-missing-rename-references
 git rebase main
+git log --oneline -5
