@@ -393,3 +393,5 @@ git branch -d feat/add-gitignore
 git log --oneline
 git log
 __vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+cd ..
