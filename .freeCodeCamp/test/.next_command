@@ -1,0 +1,336 @@
+export GIT_EDITOR=/usr/bin/nano
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+__vsc_regex_environment="^CYGWIN*|MINGW*|MSYS*"
+[[ "$(uname -s)" =~ $__vsc_regex_environment ]]
+__vsc_is_windows=0
+__vsc_regex_histcontrol=".*(erasedups|ignoreboth|ignoredups).*"
+[[ "$HISTCONTROL" =~ $__vsc_regex_histcontrol ]]
+__vsc_history_verify=1
+builtin unset __vsc_regex_environment
+builtin unset __vsc_regex_histcontrol
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+echo hello git
+mkdir sql_reference
+cd sql_reference/
+git init
+ls --color=auto -a
+git status
+git checkout -b main
+git status
+touch README.md
+git status
+git add README.md
+git status
+touch sql_reference.json
+git status
+git add sql_reference.json
+git status
+git commit -m "Initial commit"
+git status
+git log
+git log
+git status
+git diff
+git add sql_reference.json
+git status
+git commit -m "feat: add create database reference"
+git log
+git status
+git diff
+git add sql_reference.json
+git commit -m "feat: add drop database reference"
+git log
+git brancg
+git branch
+git branch feat/add-create-table-reference
+git branch
+git checkout feat/add-create-table-reference
+git branch
+git status
+git diff
+git add sql_reference.json
+git commit -m "feat: add create table reference"
+git log
+__vsc_prompt_cmd_original
+git log --oneline
+git checkout main
+git log --oneline
+git branch
+git merge feat/add-create-table-reference
+git log --oneline
+git branch -d feat/add-create-table-reference
+git branch
+git checkout -b feat/add-drop-table-reference
+git status
+git diff
+git add sql_reference.json
+git commit -m "feat: add drop table reference"
+git branch main
+git checkout main
+bit branch
+git branch
+git merge feat/add-drop-table-reference
+git branch -d feat/add-drop-table-reference
+git branch feat/add-column-reference
+git checkout feat/add-column-reference
+git checkout -b feat/add-column-references
+git branch -d feat/add-column-reference
+git diff
+__vsc_prompt_cmd_original
+git diff
+__vsc_prompt_cmd_original
+git add .
+git commit -m "feat: add column reference"
+git log --oneline
+git checkout main
+git branchout -b fix/create-table-syntax
+git checkout -b fix/create-table-syntax
+git diff
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+git add .
+git commit -m "fix: create table syntax"
+git checkout main
+git branch
+git merge fix/create-table-syntax
+git log --oneline
+git branch -d fix/create-table-syntax
+git checkout feat/add-column-references
+git log --oneline
+git rebase main
+git log --oneline
+git status
+git rebase --continue
+git add sql_reference.json
+git rebase --continue
+git commit -m "feat: add drop column reference"
+git add .
+git commit -m "feat: add drop column reference"
+git reset HEAD~1
+git add .
+git commit -m "feat: add drop column reference"
+git log --oneline
+git checkout main
+git checkout -b feat/add-insert-row-reference
+git status
+git diff
+git add .
+git commit -m "feat: add insert row reference"
+git checkout main
+git branch
+git merge feat/add-insert-row-reference
+git log --oneline
+git checkout feat/add-column-references
+git rebase main
+git status
+git add .
+git status
+git rebase --continue
+git log --oneline
+git diff
+git add .
+git commit -m "feat: add rename column reference"
+git branch
+git checkout feat/add-insert-row-reference
+git status
+git stash
+git status
+git stash list
+git stash pop
+git stash list
+git stash
+git stash list
+git stash show
+git stash show -p
+git stash apply
+git stash list
+git stash
+git stash list
+git stash show stash@{1}
+git stash show stash@{1} -p
+git stash drop
+git stash list
+git checkout main
+git branch
+git branch -d feat/add-insert-row-reference
+git checkout -b feat/add-more-row-references
+git stash list
+git stash pop
+git stash list
+git diff
+__vsc_prompt_cmd_original
+git add .
+git status
+git commit -m "feat: add update row reference"
+git checkout main
+git branch
+git merge feat/add-more-row-references
+git branch
+git checkout feat/add-column-references
+git rebase main
+git status
+git add .
+git status
+git rebase --continue
+git log --oneline
+export GIT_EDITOR=/usr/bin/nano
+builtin unset VSCODE_INJECTION
+[ -z "$VSCODE_SHELL_INTEGRATION" ]
+[ -n "${VSCODE_ENV_REPLACE:-}" ]
+[ -n "${VSCODE_ENV_PREPEND:-}" ]
+[ -n "${VSCODE_ENV_APPEND:-}" ]
+__vsc_regex_environment="^CYGWIN*|MINGW*|MSYS*"
+[[ "$(uname -s)" =~ $__vsc_regex_environment ]]
+__vsc_is_windows=0
+__vsc_regex_histcontrol=".*(erasedups|ignoreboth|ignoredups).*"
+[[ "$HISTCONTROL" =~ $__vsc_regex_histcontrol ]]
+__vsc_history_verify=1
+builtin unset __vsc_regex_environment
+builtin unset __vsc_regex_histcontrol
+__vsc_initialized=0
+__vsc_original_PS1="$PS1"
+__vsc_original_PS2="$PS2"
+__vsc_custom_PS1=""
+__vsc_custom_PS2=""
+__vsc_in_command_execution="1"
+__vsc_current_command=""
+__vsc_nonce="$VSCODE_NONCE"
+unset VSCODE_NONCE
+__vsc_stable="$VSCODE_STABLE"
+unset VSCODE_STABLE
+[ "$__vsc_stable" = "0" ]
+[[ -n "${bash_preexec_imported:-}" ]]
+__vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
+[[ -z "$__vsc_dbg_trap" ]]
+[[ "$__vsc_dbg_trap" != '__vsc_preexec "$_"' && "$__vsc_dbg_trap" != '__vsc_preexec_all "$_"' ]]
+trap '__vsc_preexec_all "$_"' DEBUG
+__vsc_original_prompt_command=${PROMPT_COMMAND:-}
+git diff
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+git diff
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+git add .
+ls --color=auto ôa
+ls --color=auto -a
+rm .git
+rmdir .git
+rmdir .git -r
+rmdir .git -d
+rmdir --help
+__vsc_prompt_cmd_original
+rmdir .git -p
+rmdir -p .git
+cd sql_reference/
+git diff
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+git add .
+git commit -m "feat: add primary key reference"
+git diff
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+git add .
+git commit -m "feat: add foreign key reference"
+git branch
+git checkout feat/add-more-row-references
+git branch
+git add .
+git commit -m "feat: add delete row reference"
+git checkout main
+git merge feat/add-more-row-references
+git branch -r feat/add-more-row-references
+git branch -d feat/add-more-row-references
+git checkout -b fix/add-missing-rename-reference
+git checkout -b fix/add-missing-rename-references
+git checkout -b fix/add-missing-rename-references
+git branch -d fix/add-missing-rename-reference
+git branch -d fix/add-missing-rename-references
+git branch
+git checkout main
+git branch -d fix/add-missing-rename-references
+git branch -d fix/add-missing-rename-references
+git checkout -b fix/add-missing-rename-references
+git diff
+__vsc_prompt_cmd_original
+git add .
+git commit -m "fix: add missing rename database reference"
+git branch
+git checkout feat/add-column-references
+git rebase main
+git status
+git add .
+git status
+git rebase --continue
+git add .
+git commit -m "feat: add unique reference"
+git reset HEAD~1
+git log --oneline
+git status
+git diff
+git add .
+git commit -m "feat: add unique reference"
+git revert HEAD
+__vsc_prompt_cmd_original
+git log --oneline
+git show
+git show HEAD~1
+git rebase --interactive HEAD~2
+git log --oneline
+git rebase --interactive -root
+git rebase --interactive -root
+git rebase --interactive --root
+rm -fr ".git/rebase-merge"
+git rebase --interactive --root
+git rebase --interactive --root
+git add .
+git rebase --interactive --root
+git rebase --interactive --root
+git rebase --interactive --root
+git status
+git log --oneline
+git add README.md sql_reference.json
+git commit -m "a"
+git rebase --interactive --root
+git log --oneline
+git reset HEAD~1
+git log --oneline
+git diff
+git log --oneline
+git rebase --interactive --rootre
+git rebase --interactive --root
+git rebase --interactive --root
+git add README.md sql_reference.json
+git commit -m "a"
+git rebase --interactive --root
+git log --oneline
+git reset HEAD~1
