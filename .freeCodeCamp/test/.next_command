@@ -334,3 +334,4 @@ git commit -m "a"
 git rebase --interactive --root
 git log --oneline
 git reset HEAD~1
+git log --oneline
