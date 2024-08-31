@@ -370,3 +370,5 @@ git branch
 git branch -d feat/add-more-row-references
 git branch -d fix/add-missing-rename-references
 git log --oneline
+git checkout feat/add-gitignore
+git checkout -b feat/add-gitignore
